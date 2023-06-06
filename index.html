@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+   <head><title>Hello world</title></head>
+   
+   <body>
+    <input type="text" id="name"/>
+    <button type="button" onclick="send()" id="send">Submit</button>
+
+    <!-- <h1 id="mydata"></h1> -->
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+
+     let socket = io();
+
+    function send(){
+        let name = document.getElementById('name').value;
+        socket.send(name);
+    }
+
+
+ 
+    //   socket.on('message',function(msg){
+
+    //     document.getElementById('mydata').innerHTML = " ";
+    //     document.getElementById('mydata').innerHTML = msg;
+    //   })
+   </script>
+   </body>
+</html>
